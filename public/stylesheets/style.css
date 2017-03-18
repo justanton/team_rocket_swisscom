@@ -20,6 +20,27 @@ a {
   display: none;
 }
 
+#gamecontainer {
+  display: none;
+}
+
+#voicepermission {
+  display: none;
+}
+
+#game {
+  text-align: center;
+}
+
+#nextbutton {
+  display: none;
+}
+
+#micicon {
+  color: red;
+  display: none;
+}
+
 #footer {
   position:absolute;
   text-align: center;
@@ -27,3 +48,4 @@ a {
   width:93%;
   height:60px;   /* Height of the footer */
 }
+
