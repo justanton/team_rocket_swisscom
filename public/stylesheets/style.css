@@ -19,3 +19,11 @@ a {
 #stoprecord {
   display: none;
 }
+
+#footer {
+  position:absolute;
+  text-align: center;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+}
