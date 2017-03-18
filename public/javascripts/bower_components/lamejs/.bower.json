@@ -1,0 +1,13 @@
+{
+  "name": "lamejs",
+  "homepage": "https://github.com/zzarcon/lamejs",
+  "_release": "9615d1ca24",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9615d1ca24d70836f4e023e5d4b3aa12e68f1ef7"
+  },
+  "_source": "git://github.com/zzarcon/lamejs.git",
+  "_target": "master",
+  "_originalSource": "git://github.com/zzarcon/lamejs.git"
+}
