@@ -1,23 +1,26 @@
 extends layout
 
 block content
-  h1= title
-  p#intro Welcome to #{title}: The Social Game played together with friends!
+  div.container
+      diw.col-xs-12
+        h1= title
+        p#intro Welcome to #{title}: The Social Game played together with friends!
 
-  p Use your voice to find out all the dirty secretes of your friends ;)
+        p Use your voice to find out all the dirty secretes of your friends ;)
 
-  div.question
-  p Placeholder for the question. Below are the buttons for input/record
-  p Here: #{ask}
+        div.question
+        p Placeholder for the question. Below are the buttons for input/record
+        p Here: #{ask}
 
-  div.rec-input
-  button(type="button") Create New Voice Recording
+  div.container
+    div.row
+      div.col-xs-4
 
-  form(method='POST' action='/new-question')
-    div.form-group
-      label(for='Question') Your Question:
-      input#question.form-control(type='text', placeholder='Your Question' name='name')
-    button.btn.btn-primary(type='submit') Create New Question
-  button(id='record') record
+          form(method='POST' action='/new-question')
+          div.form-group
+            label(for='Question') Your Question:
+            input#question.form-control(type='text', placeholder='Your Question' name='name')
+            button.btn.btn-primary(type='submit') Create New Question
+  button(id='record') Create New Voice Recording
   button(id='stoprecord') stop record
   button(id='play') play
