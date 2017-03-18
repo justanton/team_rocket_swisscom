@@ -1,6 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightgreen;
+}
+
+h1 {
+  text-align: center;
+}
+
+#intro {
+  text-align: center;
 }
 
 a {

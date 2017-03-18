@@ -2,8 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}: The Social Game played together with friends!
-  Use your voice to find out all the dirty secretes of your friends ;)
+  p#intro Welcome to #{title}: The Social Game played together with friends!
+
+  p Use your voice to find out all the dirty secretes of your friends ;)
 
   div.question
   p Placeholder for the question. Below are the buttons for input/record
@@ -11,7 +12,6 @@ block content
 
   div.rec-input
   button(type="button") Create New Voice Recording
-
 
   form(method='POST' action='/new-question')
     div.form-group
