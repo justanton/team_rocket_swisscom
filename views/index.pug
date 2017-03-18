@@ -4,20 +4,24 @@ block content
   h1= title
   p#intro Welcome to #{title}: The Social Game played together with friends!
 
-  p Use your voice to find out all the dirty secretes of your friends ;)
+  div#game
+    button#startgame.btn.btn-primary Start game
+    h1#voicepermission Please allow sound recording to proceed.
+    div#gamecontainer
+      h3 I have never
+      h4
+        div#questioncontainer
+      button#ask.btn.btn-primary Ask this question
+      button#nextbutton.btn.btn-primary Next question
+      h4#micicon
+        i.fa.fa-microphone
 
-  div.question
-  p Placeholder for the question. Below are the buttons for input/record
-  p Here: #{ask}
 
-  div.rec-input
-  button(type="button") Create New Voice Recording
 
-  form(method='POST' action='/new-question')
-    div.form-group
-      label(for='Question') Your Question:
-      input#question.form-control(type='text', placeholder='Your Question' name='name')
-    button.btn.btn-primary(type='submit') Create New Question
-  button(id='record') record
-  button(id='stoprecord') stop record
-  button(id='play') play
+
+  //-
+    form(method='POST' action='/new-question')
+      div.form-group
+        label(for='Question') Your Question:
+        input#question.form-control(type='text', placeholder='Your Question' name='name')
+      button.btn.btn-primary(type='submit') Create New Question

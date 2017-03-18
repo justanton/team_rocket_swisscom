@@ -19,3 +19,24 @@ a {
 #stoprecord {
   display: none;
 }
+
+#gamecontainer {
+  display: none;
+}
+
+#voicepermission {
+  display: none;
+}
+
+#game {
+  text-align: center;
+}
+
+#nextbutton {
+  display: none;
+}
+
+#micicon {
+  color: red;
+  display: none;
+}
