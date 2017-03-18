@@ -1,0 +1,42 @@
+{
+  "name": "microm",
+  "main": "dist/microm.js",
+  "version": "0.2.4",
+  "homepage": "https://github.com/zzarcon/microm",
+  "authors": [
+    "zzarcon"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".travis.yml",
+    "example.js",
+    "index.html",
+    "microm.js",
+    "package.json",
+    "README.md",
+    "webpack.config.js",
+    "node_modules",
+    "bower_components",
+    "test",
+    "md",
+    "lib"
+  ],
+  "dependencies": {
+    "lamejs": "git://github.com/zzarcon/lamejs.git#master",
+    "webrtc-adapter": "~0.2.5",
+    "recordrtc": "~5.2.3"
+  },
+  "devDependencies": {
+    "zepto": "~1.1.4"
+  },
+  "_release": "0.2.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.4",
+    "commit": "4e66b5be00acf3c155fe00a3eddb99e102e6554d"
+  },
+  "_source": "https://github.com/zzarcon/microm.git",
+  "_target": "^0.2.4",
+  "_originalSource": "microm",
+  "_direct": true
+}
