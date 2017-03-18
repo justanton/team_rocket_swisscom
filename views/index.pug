@@ -4,3 +4,17 @@ block content
   h1= title
   p Welcome to #{title}: The Social Game played together with friends!
   Use your voice to find out all the dirty secretes of your friends ;)
+
+  div.question
+  p Placeholder for the question. Below are the buttons for input/record
+  p Here: #{ask}
+
+  div.rec-input
+  button(type="button") Create New Voice Recording
+
+
+  form(method='POST' action='/new-question')
+    div.form-group
+      label(for='Question') Your Question:
+      input#question.form-control(type='text', placeholder='Your Question' name='name')
+    button.btn.btn-primary(type='submit') Create New Question
