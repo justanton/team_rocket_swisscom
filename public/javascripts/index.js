@@ -23,7 +23,6 @@
     var questionsAsked = [];
 
     const getQuestion = () => {
-<<<<<<< HEAD
         const questions = [
             'sprayed a grafitti',
             'cheated in school',
@@ -37,14 +36,12 @@
             'ate cat food',
             'ate dog food',
             'exceeded speed limit'
-
         ];
-=======
         index = Math.floor(Math.random() * questions.length);
         questionsAsked.push(index);
         return questions[index];
     };
->>>>>>> 9b4c7390493635a800bc29c53baac06a960735a8
+
 
     const getPreviousQuestion = () => {
         var index = 0;
