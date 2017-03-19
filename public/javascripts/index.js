@@ -17,7 +17,6 @@
         'cheated in school',
         'forgot homework',
         'eaten mushrooms',
-        'celebrated my birthday',
         'been at a hackathon'
         ];
     var questionsAsked = [];
@@ -28,13 +27,13 @@
             'cheated in school',
             'forgot homework',
             'eaten mushrooms',
-            'been at a hackathon',
+            'been to a hackathon',
             'licked someones ear',
             'been to NY',
             'smoked weed',
             'skipped classes',
-            'ate cat food',
-            'ate dog food',
+            'eaten cat food',
+            'eaten dog food',
             'exceeded speed limit'
         ];
         index = Math.floor(Math.random() * questions.length);
