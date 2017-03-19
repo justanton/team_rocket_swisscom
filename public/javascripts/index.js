@@ -3,46 +3,66 @@
     navigator.mediaDevices.getUserMedia({audio: true});
     const microm = new Microm();
     let mp3 = null;
-    let askButton = $('#ask');
     let voicePermission = $('#voicepermission');
     let gameContainer = $('#gamecontainer');
     let questionContainer = $('#questioncontainer');
     let startGameButton = $('#startgame');
+    let previousButton = $('#previousbutton');
     let nextButton = $('#nextbutton');
+    let micButton = $('#micbutton');
     let micIcon = $('#micicon');
+    const questions = [
+        'sprayed a grafitti',
+        'cheated in school',
+        'forgot homework',
+        'eaten mushrooms',
+        'celebrated my birthday',
+        'been at a hackathon'
+        ];
+    var questionsAsked = [];
 
     const getQuestion = () => {
-        const questions = [
-            'sprayed a grafitti',
-            'cheated in school',
-            'forgot homework',
-            'eaten mushrooms',
-            'celebrated my birthday',
-            'been at a hackathon'
-        ];
-
-        return questions[Math.floor(Math.random() * questions.length)];
+        index = Math.floor(Math.random() * questions.length);
+        questionsAsked.push(index);
+        return questions[index];
     };
 
-    const showNextButton = () => {
+    const getPreviousQuestion = () => {
+        var index = 0;
+        if (questionsAsked.length != 2) {
+            var newLatestIndex = questionsAsked[questionsAsked.length-2];
+            questionsAsked.pop();
+            index = newLatestIndex;
+        };
+        return questions[index];
+    };
+
+    const showButtons = () => {
         nextButton.show();
+        previousButton.show();
+        micButton.show();
     };
 
     const startNewGame = () => {
-            voicePermission.show();
-            nextButton.hide();
-            startGameButton.hide();
-            navigator.mediaDevices.getUserMedia({audio: true}).then((stream) => {
-                doTransition(() => {
-                    askButton.show();
-                    voicePermission.hide();
-                    questionContainer.text(getQuestion());
-                    gameContainer.show();
-                });
-            }).catch(function(err) {
-                /* handle the error */
+        voicePermission.show();
+        startGameButton.hide();
+        navigator.mediaDevices.getUserMedia({audio: true}).then((stream) => {
+            doTransition(() => {
+                voicePermission.hide();
+                questionContainer.text(getQuestion());
+                gameContainer.show();
             });
+        }).catch(function(err) {
+            /* handle the error */
+        });
+    };
 
+    const previousQuestion = () => {
+        doTransition(() => {
+            voicePermission.hide();
+            questionContainer.text(getPreviousQuestion());
+            gameContainer.show();
+        });
     };
 
     const uploadVoice = () => {
@@ -55,7 +75,7 @@
                 contentType: false,
                 url: '/upload_voice',
                 data: fd,
-                success: showNextButton
+                success: showButtons
             });
         });
     };
@@ -73,14 +93,14 @@
         microm.stop().then(function (result) {
             mp3 = result;
             console.log(mp3.url, mp3.blob, mp3.buffer);
-            showNextButton();
+            showButtons();
             micIcon.hide();
             uploadVoice(result);
         });
     };
 
-    askButton.click(() => {
-        askButton.hide();
+    micButton.click(() => {
+        micButton.hide();
         micIcon.show();
         microm.record().then(function () {
             setTimeout(stopRecording, 5000);
@@ -91,8 +111,18 @@
         startNewGame();
     });
 
+    previousButton.click( () => {
+        if (questionsAsked.length > 2) {
+            previousQuestion();
+        };
+    });
+
     nextButton.click( () => {
         startNewGame();
+    });
+
+    micButton.click( () => {
+
     });
 }));
 
