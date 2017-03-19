@@ -1,20 +1,24 @@
 extends layout
 
 block content
-    h1= title
-    p#intro Welcome to #{title}: The Social Game played together with friends!
-    p Record questions and earn Swisscom credits to pay your phone bill. 
+    div#intro
+        h1= title
+        p Welcome to #{title}: The Social Game played together with friends!
+        p Record questions and earn Swisscom credits to pay your phone bill. 
 
     div#game
-        button#startgame.btn.btn-primary Start game
+        button#startgame.btn.btn-primary.btn-lg Start
         h1#voicepermission Please allow sound recording to proceed.
         div#gamecontainer
-            h3 Never have I ever
-            h4
-                div#questioncontainer
-            button#previousbutton.btn.btn-primary Previous question
-            button#micbutton.btn.btn-primary Record
-            button#nextbutton.btn.btn-primary Next question
+            h2 Never Have I Ever
+            h2
+            div#questioncontainer
+            button.control#previousbutton.btn.btn-primary 
+                i.material-icons chevron_left
+            button.control#micbutton.btn.btn-primary.btn-circle
+                i.fa.fa-microphone
+            button.control#nextbutton.btn.btn-primary
+                i.material-icons chevron_right
             h4#micicon
                 i.fa.fa-microphone
 

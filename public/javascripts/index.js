@@ -11,6 +11,7 @@
     let nextButton = $('#nextbutton');
     let micButton = $('#micbutton');
     let micIcon = $('#micicon');
+    let intro = $('#intro');
     const questions = [
         'sprayed a grafitti',
         'cheated in school',
@@ -44,11 +45,12 @@
     };
 
     const startNewGame = () => {
-        voicePermission.show();
+        //voicePermission.show();
         startGameButton.hide();
+        intro.hide();
         navigator.mediaDevices.getUserMedia({audio: true}).then((stream) => {
             doTransition(() => {
-                voicePermission.hide();
+                //voicePermission.hide();
                 questionContainer.text(getQuestion());
                 gameContainer.show();
             });
@@ -59,7 +61,7 @@
 
     const previousQuestion = () => {
         doTransition(() => {
-            voicePermission.hide();
+            //voicePermission.hide();
             questionContainer.text(getPreviousQuestion());
             gameContainer.show();
         });
@@ -121,8 +123,5 @@
         startNewGame();
     });
 
-    micButton.click( () => {
-
-    });
 }));
 

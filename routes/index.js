@@ -4,7 +4,7 @@ var fs = require('fs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Never Have I Ever' });
+  res.render('index', { title: 'Never Have I Ever...' });
 });
 
 router.post('/upload_voice', (req, res, next) => {
