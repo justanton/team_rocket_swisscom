@@ -17,8 +17,15 @@
             'cheated in school',
             'forgot homework',
             'eaten mushrooms',
-            'celebrated my birthday',
-            'been at a hackathon'
+            'been at a hackathon',
+            'licked someones ear',
+            'been to NY',
+            'smoked weed',
+            'skipped classes',
+            'ate cat food',
+            'ate dog food',
+            'exceeded speed limit'
+
         ];
 
         return questions[Math.floor(Math.random() * questions.length)];
@@ -95,4 +102,3 @@
         startNewGame();
     });
 }));
-
