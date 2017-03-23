@@ -13,12 +13,18 @@
     let micIcon = $('#micicon');
     let intro = $('#intro');
     const questions = [
-        'sprayed a grafitti',
-        'cheated in school',
-        'forgot homework',
-        'eaten mushrooms',
-        'celebrated my birthday',
-        'been at a hackathon'
+      'sprayed a grafitti',
+      'cheated in school',
+      'forgotten my homework',
+      'eaten mushrooms',
+      'been at a hackathon',
+      'licked someones ear',
+      'been to NY',
+      'smoked weed',
+      'skipped a class',
+      'eaten cat food',
+      'eaten dog food',
+      'exceeded speed limit'
         ];
     var questionsAsked = [];
 
@@ -26,15 +32,15 @@
         const questions = [
             'sprayed a grafitti',
             'cheated in school',
-            'forgot homework',
+            'forgotten my homework',
             'eaten mushrooms',
-            'been at a hackathon',
+            'been to a hackathon',
             'licked someones ear',
             'been to NY',
             'smoked weed',
-            'skipped classes',
-            'ate cat food',
-            'ate dog food',
+            'skipped a class',
+            'eaten cat food',
+            'eaten dog food',
             'exceeded speed limit'
         ];
         index = Math.floor(Math.random() * questions.length);

@@ -39,4 +39,8 @@ jspm_packages
 #Jetbrains
 .idea
 
+# Ignore mp3 files
+.mp3
+
+
 .DS_Store
